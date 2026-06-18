@@ -1,0 +1,5 @@
+segment,recency_days,frequency,monetary,customers,avg_clv_target,label
+0,45.9,26.1,14236.5,288,2263.2,Champions
+1,390.1,2.2,703.7,2149,103.7,At-risk / lapsing
+2,86.0,5.4,1846.4,2824,403.1,Loyal mid-value
+3,20.0,140.4,27121.5,20,4790.1,VIP / wholesale
