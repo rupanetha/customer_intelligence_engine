@@ -1,0 +1,233 @@
+{
+  "dataset": {
+    "customers": 5281,
+    "churn_rate": 0.566
+  },
+  "eda_figures": {
+    "revenue_over_time": "/Users/sairupa/Documents/Jupyter/machine_learning/Weekly_projects/customer_intelligence_engine/reports/figures/revenue_over_time.png",
+    "monetary_hist": "/Users/sairupa/Documents/Jupyter/machine_learning/Weekly_projects/customer_intelligence_engine/reports/figures/monetary_hist.png",
+    "top_products": "/Users/sairupa/Documents/Jupyter/machine_learning/Weekly_projects/customer_intelligence_engine/reports/figures/top_products.png",
+    "revenue_by_country": "/Users/sairupa/Documents/Jupyter/machine_learning/Weekly_projects/customer_intelligence_engine/reports/figures/revenue_by_country.png"
+  },
+  "stats": {
+    "ttest_aov_uk_vs_other": {
+      "uk_mean": 332.35,
+      "other_mean": 603.77,
+      "t_stat": -11.953,
+      "p_value": 0.0,
+      "significant_at_0.05": true
+    },
+    "chisq_country_vs_churn": {
+      "chi2": 1.237,
+      "p_value": 0.2661,
+      "dof": 1,
+      "significant_at_0.05": false
+    }
+  },
+  "regression": {
+    "LinearRegression": {
+      "r2": 0.466,
+      "mae": 348.61,
+      "rmse": 615.92
+    },
+    "DecisionTree": {
+      "r2": -0.004,
+      "mae": 429.94,
+      "rmse": 844.37
+    },
+    "RandomForest": {
+      "r2": 0.477,
+      "mae": 340.92,
+      "rmse": 609.31
+    },
+    "RandomForest_tuned": {
+      "r2": 0.492,
+      "mae": 334.23,
+      "rmse": 600.47,
+      "best_params": {
+        "model__max_depth": 12,
+        "model__min_samples_leaf": 2,
+        "model__n_estimators": 200
+      },
+      "cv_r2": 0.536
+    }
+  },
+  "classification": {
+    "LogisticRegression": {
+      "accuracy": 0.737,
+      "precision": 0.742,
+      "recall": 0.82,
+      "f1": 0.779,
+      "roc_auc": 0.807
+    },
+    "DecisionTree": {
+      "accuracy": 0.633,
+      "precision": 0.677,
+      "recall": 0.672,
+      "f1": 0.675,
+      "roc_auc": 0.627
+    },
+    "RandomForest": {
+      "accuracy": 0.722,
+      "precision": 0.732,
+      "recall": 0.803,
+      "f1": 0.766,
+      "roc_auc": 0.792
+    },
+    "KNN": {
+      "accuracy": 0.717,
+      "precision": 0.737,
+      "recall": 0.777,
+      "f1": 0.757,
+      "roc_auc": 0.787
+    },
+    "RandomForest_tuned": {
+      "accuracy": 0.734,
+      "precision": 0.731,
+      "recall": 0.838,
+      "f1": 0.781,
+      "roc_auc": 0.807,
+      "best_params": {
+        "model__max_depth": 12,
+        "model__min_samples_leaf": 2,
+        "model__n_estimators": 200
+      }
+    },
+    "threshold_tuning": {
+      "best_threshold": 0.4,
+      "f1_at_best": 0.793
+    }
+  },
+  "segmentation": {
+    "best_k": 4,
+    "silhouette_by_k": {
+      "3": 0.5047937658258796,
+      "4": 0.518930513457306,
+      "5": 0.5045336479553768,
+      "6": 0.485990115271572
+    },
+    "profile": [
+      {
+        "segment": 0,
+        "recency_days": 45.9,
+        "frequency": 26.1,
+        "monetary": 14236.5,
+        "customers": 288,
+        "avg_clv_target": 2263.2,
+        "label": "Champions"
+      },
+      {
+        "segment": 1,
+        "recency_days": 390.1,
+        "frequency": 2.2,
+        "monetary": 703.7,
+        "customers": 2149,
+        "avg_clv_target": 103.7,
+        "label": "At-risk / lapsing"
+      },
+      {
+        "segment": 2,
+        "recency_days": 86.0,
+        "frequency": 5.4,
+        "monetary": 1846.4,
+        "customers": 2824,
+        "avg_clv_target": 403.1,
+        "label": "Loyal mid-value"
+      },
+      {
+        "segment": 3,
+        "recency_days": 20.0,
+        "frequency": 140.4,
+        "monetary": 27121.5,
+        "customers": 20,
+        "avg_clv_target": 4790.1,
+        "label": "VIP / wholesale"
+      }
+    ]
+  },
+  "association": {
+    "n_rules": 56,
+    "top_rules": [
+      {
+        "antecedents": "ROSES REGENCY TEACUP AND SAUCER",
+        "consequents": "GREEN REGENCY TEACUP AND SAUCER",
+        "support": 0.025,
+        "confidence": 0.704,
+        "lift": 22.462
+      },
+      {
+        "antecedents": "GREEN REGENCY TEACUP AND SAUCER",
+        "consequents": "ROSES REGENCY TEACUP AND SAUCER",
+        "support": 0.025,
+        "confidence": 0.796,
+        "lift": 22.462
+      },
+      {
+        "antecedents": "DOLLY GIRL LUNCH BOX",
+        "consequents": "SPACEBOY LUNCH BOX",
+        "support": 0.023,
+        "confidence": 0.673,
+        "lift": 18.101
+      },
+      {
+        "antecedents": "SPACEBOY LUNCH BOX",
+        "consequents": "DOLLY GIRL LUNCH BOX",
+        "support": 0.023,
+        "confidence": 0.606,
+        "lift": 18.101
+      },
+      {
+        "antecedents": "ALARM CLOCK BAKELIKE RED",
+        "consequents": "ALARM CLOCK BAKELIKE GREEN",
+        "support": 0.024,
+        "confidence": 0.614,
+        "lift": 17.558
+      },
+      {
+        "antecedents": "ALARM CLOCK BAKELIKE GREEN",
+        "consequents": "ALARM CLOCK BAKELIKE RED",
+        "support": 0.024,
+        "confidence": 0.674,
+        "lift": 17.558
+      },
+      {
+        "antecedents": "SWEETHEART CERAMIC TRINKET BOX",
+        "consequents": "STRAWBERRY CERAMIC TRINKET BOX",
+        "support": 0.027,
+        "confidence": 0.698,
+        "lift": 11.431
+      },
+      {
+        "antecedents": "STRAWBERRY CERAMIC TRINKET BOX",
+        "consequents": "SWEETHEART CERAMIC TRINKET BOX",
+        "support": 0.027,
+        "confidence": 0.449,
+        "lift": 11.431
+      },
+      {
+        "antecedents": "LUNCH BAG RED RETROSPOT",
+        "consequents": "LUNCH BAG PINK POLKADOT",
+        "support": 0.021,
+        "confidence": 0.409,
+        "lift": 11.071
+      },
+      {
+        "antecedents": "LUNCH BAG PINK POLKADOT",
+        "consequents": "LUNCH BAG RED RETROSPOT",
+        "support": 0.021,
+        "confidence": 0.565,
+        "lift": 11.071
+      }
+    ]
+  },
+  "causal_impact": {
+    "event_window": [
+      "2010-06-29",
+      "2010-07-13"
+    ],
+    "actual_revenue": 273560.5,
+    "expected_revenue": 278938.71,
+    "estimated_lift": -5378.21,
+    "relative_lift_pct": -1.9
+  }
+}
